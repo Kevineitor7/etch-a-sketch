@@ -1,0 +1,139 @@
+:root {
+    --grid-rows: 1;
+    --grid-cols: 1;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    border: 300px solid #be0101;
+    border-top-width: 140px;
+    border-bottom-width: 140px;
+    border-radius: 2px;
+    height: 72vh;
+    overflow: hidden;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    margin-top: 100px;
+    margin-left: 90px;
+    border: 4px dashed black;
+    width: 120px;
+    height: 500px;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #FFF7D4;
+}
+
+
+#slider {
+    appearance: slider-vertical;
+    height: 160px;
+}
+
+.container {
+    width: auto;
+    height: 99%;
+    border: 8px groove black;
+    display: grid;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+.grid {
+    border: 1px solid black;
+}
+
+h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 0.20rem;
+    font-size: 2.8rem;
+    font-family: 'Kaushan Script', cursive;
+    color: #FFD95A;
+    margin-left: 0px;
+    margin-top: 40px
+}
+
+
+
+.switch-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 25px;
+    bottom: 5px;
+}
+
+.slider-checkbox {
+    position: absolute;
+    cursor: pointer;
+    background-color: gray;
+    border-radius: 30px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: .4s;
+}
+
+.slider-checkbox:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 30px;
+    background-color: white;
+    border-radius: 30px;
+    left: 5px;
+    bottom: 5px;
+    transition: .4s;
+}
+
+#checkbox:checked + .slider-checkbox {
+    background-color: blue;
+}
+
+#checkbox:checked + .slider-checkbox:before {
+    transform: translateX(60px)
+}
+
+#checkbox2:checked + .slider-checkbox {
+    background-color: blue;
+}
+
+#checkbox2:checked + .slider-checkbox:before {
+    transform: translateX(60px)
+}
+
+footer {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 1.7rem;
+    letter-spacing: 0.12rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 4px;
+    transition: .2s;
+}
+
+footer a {
+    text-decoration: none;
+    color: #FFD95A;
+}
+
+footer a:hover {
+    color:blanchedalmond;
+}
+
+
